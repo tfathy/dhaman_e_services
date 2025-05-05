@@ -1,3 +1,4 @@
+import 'package:dhaman_e_services/screens/login/login_button.dart';
 import 'package:dhaman_e_services/screens/login/logo_area.dart';
 import 'package:dhaman_e_services/screens/login/password_field.dart';
 import 'package:dhaman_e_services/screens/login/user_name_field.dart';
@@ -55,21 +56,7 @@ class LoginScreen extends StatelessWidget {
 
 
 
-class LoginButton extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(onPressed: (){},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: Color(0xff641B2E),
-          minimumSize: Size(300, 70),
-         elevation: 10,
-          shadowColor: Color(0xff8A2D3B)
-        )
-        ,child:
-    Text('Login', style: TextStyle(color: Color(0xffFBDB93),fontSize: 26),)
-    );
-  }
-}
+
 
 class forgetPassword extends StatelessWidget {
   @override
@@ -80,7 +67,7 @@ class forgetPassword extends StatelessWidget {
         child: Text(
           'forget passord',
           style: TextStyle(
-            color: Colors.blue,
+            color: Color(0xff641B2E),
             fontSize: 14,
             fontWeight: FontWeight.w700,
           ),

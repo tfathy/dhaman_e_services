@@ -37,17 +37,17 @@ class _PasswordFieldState extends State<PasswordField> {
           },
         ),
         labelText: widget.title,
-        labelStyle: TextStyle(fontSize: 22, color: Colors.blue),
+        labelStyle: TextStyle(fontSize: 22, color: Color(0xff641B2E)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.blue, width: 2),
+          borderSide: BorderSide(color:Color(0xff641B2E), width: 2),
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.green, width: 2),
+          borderSide: BorderSide(color: Color(0xff641B2E), width: 2),
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.red, width: 2),
+          borderSide: BorderSide(color: Color(0xff641B2E), width: 2),
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         focusedErrorBorder: OutlineInputBorder(
