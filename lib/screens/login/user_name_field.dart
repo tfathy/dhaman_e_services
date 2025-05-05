@@ -23,7 +23,7 @@ class UserNameField extends StatelessWidget {
         labelStyle: TextStyle(fontSize: 22, color: fontColor),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
-            color: Color(0xff641B2E),
+            color: Color(0xff670D2F),
             width: 2
           ),
           borderRadius: BorderRadius.all(Radius.circular(20))

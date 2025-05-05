@@ -12,10 +12,8 @@ class LoginScreen extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xffFBDB93),
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Color(0xffFBDB93),
           title: Text(
             'Login',
             style: TextStyle(
@@ -33,15 +31,15 @@ class LoginScreen extends StatelessWidget {
             children: [
               SizedBox(height: 20),
               LogoArea(),
-              SizedBox(height: 70),
+              SizedBox(height: 50),
               UserNameField(
                 title: 'email',
                 icon: Icon(Icons.email),
                 usernameController: userNameController,
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 10),
               PasswordField(title: 'Password',passwordController:  pwController,),
-              SizedBox(height: 100),
+              SizedBox(height: 50),
               LoginButton(),
               SizedBox(height: 30),
               forgetPassword(),

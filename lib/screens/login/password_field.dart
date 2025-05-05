@@ -37,9 +37,9 @@ class _PasswordFieldState extends State<PasswordField> {
           },
         ),
         labelText: widget.title,
-        labelStyle: TextStyle(fontSize: 22, color: Color(0xff641B2E)),
+        labelStyle: TextStyle(fontSize: 22, color: Color(0xff670D2F)),
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color:Color(0xff641B2E), width: 2),
+          borderSide: BorderSide(color:Color(0xff670D2F), width: 2),
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
         focusedBorder: OutlineInputBorder(
