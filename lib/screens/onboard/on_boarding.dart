@@ -20,10 +20,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     'Want to take Sick leave?',
     'Are you late? take permission',
   ];
+  List<Color> colors = [Colors.green, Colors.orange, Colors.redAccent];
 
   PageController pageCtrl = PageController();
 
-  int currentPageIndex =0;
+  int currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -37,9 +38,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             Expanded(
               child: PageView.builder(
                 onPageChanged: (index) {
-                setState(() {
-                  currentPageIndex = index;
-                });
+                  setState(() {
+                    currentPageIndex = index;
+                  });
                 },
                 controller: pageCtrl,
                 itemCount: images.length,
@@ -49,15 +50,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     spacing: 10,
                     children: [
                       Container(
+                        margin: EdgeInsets.symmetric(horizontal: 10),
                         width: double.infinity,
                         height: 300,
-                        color: Colors.blue,
-                        child: Image.asset(
-                          images[index],
-                          height: 60,
-                          width: 40,
-                          fit: BoxFit.cover,
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1.5,color: colors[index]),
+
+                          image: DecorationImage(
+                            image: AssetImage(images[index]),fit: BoxFit.cover
+                          ),
                         ),
+
                       ),
                       Text(
                         title[index],
@@ -77,16 +80,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 ),
               ),
               onPressed: () {
-                // pageCtrl.nextPage(
-                //   duration: Duration(milliseconds: 750),
-                //   curve: null,
-                // );
-                if(currentPageIndex == title.length-1){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>LoginScreen()));
+                pageCtrl.nextPage(duration: Duration(milliseconds: 750), curve: Curves.decelerate);
+                if (currentPageIndex == title.length - 1) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
                 }
               },
               child:
-                  currentPageIndex == title.length-1
+                  currentPageIndex == title.length - 1
                       ? Text('Start', style: TextStyle(color: Colors.white))
                       : Text('Next', style: TextStyle(color: Colors.white)),
             ),
