@@ -1,3 +1,4 @@
+import 'package:dhaman_e_services/screens/login/ForgetPassword.dart';
 import 'package:dhaman_e_services/screens/login/login_button.dart';
 import 'package:dhaman_e_services/screens/login/logo_area.dart';
 import 'package:dhaman_e_services/screens/login/password_field.dart';
@@ -7,11 +8,11 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   TextEditingController userNameController = TextEditingController();
   TextEditingController pwController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return
+      Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: Text(
@@ -38,16 +39,16 @@ class LoginScreen extends StatelessWidget {
                 usernameController: userNameController,
               ),
               SizedBox(height: 10),
-              PasswordField(title: 'Password',passwordController:  pwController,),
+              PasswordField(
+                title: 'Password', passwordController: pwController,),
               SizedBox(height: 50),
               LoginButton(),
               SizedBox(height: 30),
-              forgetPassword(),
+              Forgetpassword(),
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
@@ -57,21 +58,3 @@ class LoginScreen extends StatelessWidget {
 
 
 
-class forgetPassword extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 30,
-      child: Center(
-        child: Text(
-          'forget passord',
-          style: TextStyle(
-            color: Color(0xff641B2E),
-            fontSize: 14,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
-    );
-  }
-}
