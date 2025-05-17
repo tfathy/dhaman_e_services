@@ -1,3 +1,4 @@
+import 'package:dhaman_e_services/screens/home/home.dart';
 import 'package:dhaman_e_services/screens/landing.dart';
 import 'package:dhaman_e_services/screens/login_screen.dart';
 import 'package:dhaman_e_services/screens/transactions.dart';
@@ -21,7 +22,7 @@ class _LoginButtonState extends State<LoginButton> {
           setState(() {
             showLoading = false;
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => LandingScreen()),
+              MaterialPageRoute(builder: (context) => Home()),
             );
           });
         });

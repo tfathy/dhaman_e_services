@@ -89,7 +89,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               },
               child:
                   currentPageIndex == title.length - 1
-                      ? Text('Start', style: TextStyle(color: Colors.white))
+                      ? Text('Finish', style: TextStyle(color: Colors.white))
                       : Text('Next', style: TextStyle(color: Colors.white)),
             ),
           ],
